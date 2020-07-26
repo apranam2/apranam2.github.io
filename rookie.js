@@ -29,6 +29,6 @@ async function loadGraph() {
 	.call(d3.axisLeft(y));
 
 	d3.select('svg').append('g')
-	attr('transform','translate(' + margin + "," + (height + margin) +')')
+	.attr('transform','translate(' + margin + "," + (height + margin) +')')
 	.call(d3.axisBottom(x));
 }
