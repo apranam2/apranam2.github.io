@@ -3,7 +3,7 @@ async function loadGraph() {
 	var data = await d3.csv('data/rookie.csv');
 
 	var margin = {top: 20, right: 20, bottom: 30, left: 40};
-	var width = 960 - margin.left - margin.right,
+	var width = 960 - margin.left - margin.right;
 	var height = 500 - margin.top - margin.bottom;
 
 	var svg = d3.select("body").append("svg")
@@ -12,9 +12,9 @@ async function loadGraph() {
 	    .append("g")
 	    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-	var x = d3.scaleLinear().range([0, width]);
+	var x = d3.scaleLinear().domain([0,48]).range([0, width]);
 
-	var y = d3.scaleLinear().range([height, 0]);
+	var y = d3.scaleLinear().domain([0,50]).range([height, 0]);
 
 	svg.selectAll(".dot")
 	  .data(data)
