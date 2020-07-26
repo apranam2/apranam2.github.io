@@ -12,11 +12,11 @@ async function loadGraph() {
 	    .append("g")
 	    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-	xScale = d3.scale.linear().range([0, width]),
-	xAxis = d3.svg.axis().scale(xScale).orient("bottom");
+	xScale = d3.scaleLinear().range([0, width]),
+	//xAxis = d3.svg.axis().scale(xScale).orient("bottom");
 
-	yScale = d3.scale.linear().range([height, 0]);
-	yAxis = d3.svg.axis().scale(yScale).orient("left");
+	yScale = d3.scaleLinear().range([height, 0]);
+	//yAxis = d3.svg.axis().scale(yScale).orient("left");
 
 	svg.selectAll(".dot")
 	  .data(data)
