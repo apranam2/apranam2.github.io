@@ -12,25 +12,23 @@ async function loadGraph() {
 	    .append("g")
 	    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-	xScale = d3.scaleLinear().range([0, width]),
-	xAxis = d3.svg.axis().scale(xScale).orient("bottom");
+	var x = d3.scaleLinear().range([0, width]);
 
-	yScale = d3.scaleLinear().range([height, 0]);
-	yAxis = d3.svg.axis().scale(yScale).orient("left");
+	var y = d3.scaleLinear().range([height, 0]);
 
 	svg.selectAll(".dot")
 	  .data(data)
 	  .enter().append("circle")
 	  .attr("class", "dot")
 	  .attr("r", 3)
-	  .attr("cx", function(d) {return xScale(d.Minutes)})
-	  .attr("cy", function(d) {return yScale(d.PTS)});
+	  .attr("cx", function(d) {return x(d.Minutes)})
+	  .attr("cy", function(d) {return y(d.PTS)});
 
 	d3.select('svg').append('g')
 	.attr('transform','translate(' + margin + "," + margin +')')
-	.call(d3.axisLeft(yAxis));
+	.call(d3.axisLeft(y));
 
 	d3.select('svg').append('g')
 	attr('transform','translate(' + margin + "," + (height + margin) +')')
-	.call(d3.axisBottom(xAxis));
+	.call(d3.axisBottom(x));
 }
