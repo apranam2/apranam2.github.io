@@ -24,6 +24,5 @@ async function loadGraph() {
 	  .attr("class", "dot")
 	  .attr("r", 3)
 	  .attr("cx", function(d) {return xScale(d.Minutes)})
-	  .attr("cy", function(d) {return yScale(d.PTS)})
-	  .style("fill", function(d) { return color(cValue(d));});
+	  .attr("cy", function(d) {return yScale(d.PTS)});
 }
