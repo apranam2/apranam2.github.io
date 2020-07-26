@@ -13,10 +13,10 @@ async function loadGraph() {
 	    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 	xScale = d3.scaleLinear().range([0, width]),
-	//xAxis = d3.svg.axis().scale(xScale).orient("bottom");
+	xAxis = d3.svg.axis().scale(xScale).orient("bottom");
 
 	yScale = d3.scaleLinear().range([height, 0]);
-	//yAxis = d3.svg.axis().scale(yScale).orient("left");
+	yAxis = d3.svg.axis().scale(yScale).orient("left");
 
 	svg.selectAll(".dot")
 	  .data(data)
@@ -25,4 +25,12 @@ async function loadGraph() {
 	  .attr("r", 3)
 	  .attr("cx", function(d) {return xScale(d.Minutes)})
 	  .attr("cy", function(d) {return yScale(d.PTS)});
+
+	d3.select('svg').append('g')
+	.attr('transform','translate(' + margin + "," + margin +')')
+	.call(d3.axisLeft(yAxis));
+
+	d3.select('svg').append('g')
+	attr('transform','translate(' + margin + "," + (height + margin) +')')
+	.call(d3.axisBottom(xAxis));
 }
