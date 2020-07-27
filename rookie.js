@@ -12,7 +12,7 @@ async function loadGraph() {
 	    .append("g")
 	    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-	var x = d3.scaleLinear().domain([0,48]).range([0, width]);
+	var x = d3.scaleLinear().domain([0,50]).range([0, width]);
 
 	var y = d3.scaleLinear().domain([0,50]).range([height, 0]);
 
@@ -30,6 +30,6 @@ async function loadGraph() {
 	.call(d3.axisLeft(y));
 
 	d3.select('svg').append('g')
-	.attr('transform','translate(' + margin.bottom + "," + (height + margin.top) +')')
+	.attr('transform','translate(' + margin.left + "," + (height + margin.top) +')')
 	.call(d3.axisBottom(x));
 }
