@@ -22,7 +22,7 @@ async function loadGraph() {
 	  .attr("class", "dot")
 	  .attr("r", 3)
 	  .attr("cx", function(d) {return x(d.Minutes);})
-	  .attr("cy", function(d) {return y(d.PTS);});
+	  .attr("cy", function(d) {return y(d.PTS);})
 	  .attr("fill" function(d) { if (d.Result == "L") {return "red";} else {return "blue";}};
 
 	d3.select('svg').append('g')
