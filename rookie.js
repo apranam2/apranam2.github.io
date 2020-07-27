@@ -26,7 +26,7 @@ async function loadGraph() {
 	  .attr("fill", function(d) { if (d.Result == "L") {return "red";} else {return "blue";}});
 
 	d3.select('svg').append('g')
-	.attr('transform','translate(' + margin.left + "," + margin.right +')')
+	.attr('transform','translate(' + margin.left + "," + margin.top +')')
 	.call(d3.axisLeft(y));
 
 	d3.select('svg').append('g')
