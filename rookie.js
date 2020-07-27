@@ -5,9 +5,13 @@ async function loadGraph() {
 	var margin = {top: 20, right: 20, bottom: 30, left: 40};
 	var width = 960 - margin.left - margin.right;
 	var height = 500 - margin.top - margin.bottom;
+	console.log(data[0].Dates);
+	console.log(data[data.length-1].Dates);
 
 	var minDate = getDate(data[0]);
 	var maxDate = getDate(data[data.length-1]);
+	console.log(minDate);
+	console.log(maxDate);
 
 	var svg = d3.select("body").append("svg")
 	    .attr("width", width + margin.left + margin.right)
