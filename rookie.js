@@ -41,6 +41,6 @@ async function loadGraph() {
 	.call(d3.axisBottom(x));
 }
 
-async function getDate(d) {
+function getDate(d) {
         return new Date(d.Dates);
 }
