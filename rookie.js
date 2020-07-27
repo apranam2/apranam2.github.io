@@ -2,7 +2,7 @@ async function loadGraph() {
 	console.log('hi');
 	var data = await d3.csv('data/rookie.csv');
 
-	var margin = {top: 20, right: 20, bottom: 30, left: 40};
+	var margin = {top: 20, right: 20, bottom: 20, left: 20};
 	var width = 960 - margin.left - margin.right;
 	var height = 500 - margin.top - margin.bottom;
 
@@ -10,7 +10,6 @@ async function loadGraph() {
 	    .attr("width", width + margin.left + margin.right)
 	    .attr("height", height + margin.top + margin.bottom)
 	    .append("g")
-	    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 	var x = d3.scaleLinear().domain([0,50]).range([0, width]);
 
