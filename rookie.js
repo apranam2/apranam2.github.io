@@ -1,5 +1,4 @@
 async function loadGraph() {
-	console.log('hi');
 	var data = await d3.csv('data/rookie.csv');
 
 	var margin = {top: 20, right: 20, bottom: 30, left: 40};
@@ -15,7 +14,7 @@ async function loadGraph() {
 	    .append("g")
 	    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-	var x = d3.scaleTime().domain([minDate, maxDate]).range([0, width]);
+	var x = d3.scaleTime().domain([minDate, maxDate]).nice().range([0, width]);
 
 	var y = d3.scaleLinear().domain([0,50]).range([height, 0]);
 
