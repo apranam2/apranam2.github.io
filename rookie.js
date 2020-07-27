@@ -2,7 +2,7 @@ async function loadGraph() {
 	console.log('hi');
 	var data = await d3.csv('data/rookie.csv');
 
-	var margin = {top: 20, right: 20, bottom: 30, left: 120};
+	var margin = {top: 20, right: 20, bottom: 30, left: 40};
 	var width = 960 - margin.left - margin.right;
 	var height = 500 - margin.top - margin.bottom;
 
