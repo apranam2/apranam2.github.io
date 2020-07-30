@@ -18,7 +18,7 @@ async function loadGraph() {
 
 	var y = d3.scaleLinear().domain([0,50]).range([height, 0]);
 
-	var tooltip = d3.select("body").append("div").style("opacity", 0);
+	var tooltip = d3.select("body").append("div").attr("class", "tooltip").style("opacity", 0);
 
 	svg.selectAll(".dot")
 	  .data(data)
