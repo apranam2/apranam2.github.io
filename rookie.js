@@ -31,8 +31,9 @@ async function loadGraph() {
 	  .on("mouseover", function(d) {
 	  	tooltip.transition()
 	  		.duration(500)
-	  		.html("HELLO")
-	  		.style("opacity", 1)
+	  		.style("opacity", 1);
+
+	  	tooltip.html("HELLO")
 	  		.style("left", (d3.event.pageX) + "px")
         	.style("top", (d3.event.pageY) + "px");
 
