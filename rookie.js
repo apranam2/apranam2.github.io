@@ -34,8 +34,8 @@ async function loadGraph() {
 	  		.style("opacity", 1);
 
 	  	tooltip.html(d.Dates + "</br> Points: " + d.PTS + "</br> Assists: " + d.AST + "</br> Rebounds: " + d.REB + "</br> Steals: " + d.STL)
-	  		.style("left", (d3.event.pageX - 30) + "px")
-        	.style("top", (d3.event.pageY - 30) + "px");
+	  		.style("left", (d3.event.pageX - 60) + "px")
+        	.style("top", (d3.event.pageY - 60) + "px");
 
 	  })
 	  .on("mouseout", function(d) {
