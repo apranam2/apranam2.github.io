@@ -33,7 +33,7 @@ async function loadGraph() {
 	  		.duration(500)
 	  		.style("opacity", 1);
 
-	  	tooltip.html("HELLO")
+	  	tooltip.html(d.Dates + "</br> Points: " + d.PTS + "</br> Assists: " + d.AST + "</br> Rebounds: " + d.REB + "</br> Steals: " + d.STL)
 	  		.style("left", (d3.event.pageX) + "px")
         	.style("top", (d3.event.pageY) + "px");
 
