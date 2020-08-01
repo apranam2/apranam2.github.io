@@ -18,6 +18,8 @@ async function loadGraph() {
 
 	var y = d3.scaleLinear().domain([0,50]).range([height, 0]);
 
+	var tooltip = d3.select("body").append("div").attr("class", "tooltip").style("opacity", 0);
+
 	svg.selectAll(".dot")
 	  .data(data)
 	  .enter().append("circle")
@@ -25,7 +27,22 @@ async function loadGraph() {
 	  .attr("r", 3)
 	  .attr("cx", function(d) {return x(getDate(d));})
 	  .attr("cy", function(d) {return y(d.PTS);})
-	  .attr("fill", function(d) { if (d.Result == "L") {return "red";} else {return "blue";}});
+	  .attr("fill", function(d) { if (d.Result == "L") {return "red";} else {return "blue";}})
+	  .on("mouseover", function(d) {
+	  	tooltip.transition()
+	  		.duration(500)
+	  		.style("opacity", 1);
+
+	  	tooltip.html(d.Dates + "</br> Points: " + d.PTS + "</br> Assists: " + d.AST + "</br> Rebounds: " + d.REB + "</br> Steals: " + d.STL)
+	  		.style("left", (d3.event.pageX - 80) + "px")
+        	.style("top", (d3.event.pageY - 80) + "px");
+
+	  })
+	  .on("mouseout", function(d) {
+          tooltip.transition()
+               .duration(500)
+               .style("opacity", 0);
+      });
 
 	d3.select('svg').append('g')
 	.attr('transform','translate(' + margin.left + "," + margin.top +')')
