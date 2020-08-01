@@ -44,10 +44,12 @@ async function loadGraph() {
                .style("opacity", 0);
       });
 
-    svg.append("circle").attr("r", 30)
-    .attr("class", "dot")
-    .attr("cx", 200)
-	.attr("cy", 400);
+    svg.append("line")
+    .attr("x1", 250)
+    .attr("y1", 350)
+    .attr("x2", 250)
+	.attr("y2", 450)
+	.attr("stroke-width", 5);
 
 	d3.select('svg').append('g')
 	.attr('transform','translate(' + margin.left + "," + margin.top +')')
