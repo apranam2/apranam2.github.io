@@ -44,6 +44,11 @@ async function loadGraph() {
                .style("opacity", 0);
       });
 
+    d3.select("body").append("circle").attr("r", 30)
+    .attr("class", "dot")
+    .attr("cx", 200)
+	.attr("cy", 600);
+
 	d3.select('svg').append('g')
 	.attr('transform','translate(' + margin.left + "," + margin.top +')')
 	.call(d3.axisLeft(y));
