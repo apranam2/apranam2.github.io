@@ -44,6 +44,22 @@ async function loadGraph() {
                .style("opacity", 0);
       });
 
+    svg.append("line")
+    .attr("x1", 0)
+    .attr("y1", 225)
+    .attr("x2", 25)
+	.attr("y2", 225)
+	.attr("stroke", "black")
+	.attr("stroke-width", 2);
+
+	svg.append("text")
+    .attr("x", 25)
+    .attr("y", 225)
+	.text("23.8 PTS AVG")
+	.attr("font-family", "sans-serif")
+    .attr("font-size", "12px")
+    .attr("fill", "black");
+
 	d3.select('svg').append('g')
 	.attr('transform','translate(' + margin.left + "," + margin.top +')')
 	.call(d3.axisLeft(y));
