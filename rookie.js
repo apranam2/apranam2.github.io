@@ -46,15 +46,15 @@ async function loadGraph() {
 
     svg.append("line")
     .attr("x1", 0)
-    .attr("y1", 290)
+    .attr("y1", 295)
     .attr("x2", 50)
-	.attr("y2", 290)
+	.attr("y2", 295)
 	.attr("stroke", "black")
 	.attr("stroke-width", 2);
 
 	svg.append("text")
     .attr("x", 55)
-    .attr("y", 290)
+    .attr("y", 300)
 	.text("17.5 PTS AVG")
 	.attr("font-family", "sans-serif")
     .attr("font-size", "12px")
