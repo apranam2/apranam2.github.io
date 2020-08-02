@@ -58,7 +58,7 @@ async function loadGraph() {
     .attr("x2", 250)
 	.attr("y2", 425)
 	.attr("stroke", "black")
-	.attr("stroke-width", 2);
+	.attr("stroke-width", 1);
 
 	svg.append("text")
     .attr("x", 580)
@@ -74,7 +74,7 @@ async function loadGraph() {
     .attr("x2", 615)
 	.attr("y2", 425)
 	.attr("stroke", "black")
-	.attr("stroke-width", 2);
+	.attr("stroke-width", 1);
 
 	d3.select('svg').append('g')
 	.attr('transform','translate(' + margin.left + "," + margin.top +')')

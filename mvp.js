@@ -50,7 +50,7 @@ async function loadGraph() {
     .attr("x2", 25)
 	.attr("y2", 240)
 	.attr("stroke", "black")
-	.attr("stroke-width", 2);
+	.attr("stroke-width", 1);
 
 	svg.append("text")
     .attr("x", 25)
@@ -66,7 +66,7 @@ async function loadGraph() {
     .attr("x2", 440)
 	.attr("y2", -9)
 	.attr("stroke", "black")
-	.attr("stroke-width", 2);
+	.attr("stroke-width", 1);
 
 	svg.append("text")
     .attr("x", 450)
