@@ -46,11 +46,11 @@ async function loadGraph() {
 
     svg.append("line")
     .attr("x1", 250)
-    .attr("y1", 350)
+    .attr("y1", 375)
     .attr("x2", 250)
-	.attr("y2", 450)
+	.attr("y2", 425)
 	.attr("stroke", "gray")
-	.attr("stroke-width", 5);
+	.attr("stroke-width", 2);
 
 	d3.select('svg').append('g')
 	.attr('transform','translate(' + margin.left + "," + margin.top +')')
