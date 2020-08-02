@@ -47,7 +47,7 @@ async function loadGraph() {
     svg.append("text")
     .attr("x", 250)
     .attr("y", 385)
-	.attr("text", "TESTING");
+	.attr("text", "TESTING")
 	.attr("font-family", "sans-serif")
     .attr("font-size", "12px")
     .attr("fill", "black");
