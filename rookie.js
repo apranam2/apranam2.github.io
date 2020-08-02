@@ -60,6 +60,22 @@ async function loadGraph() {
     .attr("font-size", "12px")
     .attr("fill", "black");
 
+    svg.append("line")
+    .attr("x1", 800)
+    .attr("y1", 70)
+    .attr("x2", 820)
+	.attr("y2", 70)
+	.attr("stroke", "black")
+	.attr("stroke-width", 2);
+
+	svg.append("text")
+    .attr("x", 700)
+    .attr("y", 70)
+	.text("Season High of 42 points")
+	.attr("font-family", "sans-serif")
+    .attr("font-size", "12px")
+    .attr("fill", "black");
+
 	d3.select('svg').append('g')
 	.attr('transform','translate(' + margin.left + "," + margin.top +')')
 	.call(d3.axisLeft(y));
