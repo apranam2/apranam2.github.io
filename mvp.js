@@ -61,15 +61,15 @@ async function loadGraph() {
     .attr("fill", "black");
 
     svg.append("line")
-    .attr("x1", 385)
+    .attr("x1", 425)
     .attr("y1", -9)
-    .attr("x2", 405)
+    .attr("x2", 440)
 	.attr("y2", -9)
 	.attr("stroke", "black")
 	.attr("stroke-width", 2);
 
 	svg.append("text")
-    .attr("x", 335)
+    .attr("x", 450)
     .attr("y", -9)
 	.text("Season High of 51 Points")
 	.attr("font-family", "sans-serif")
