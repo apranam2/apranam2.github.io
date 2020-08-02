@@ -44,12 +44,27 @@ async function loadGraph() {
                .style("opacity", 0);
       });
 
+    svg.append("text")
+    .attr("x", 250)
+    .attr("y", 385)
+    .attr("x2", 250)
+	.attr("y2", 425)
+	.attr("text", "TESTING");
+
     svg.append("line")
     .attr("x1", 250)
     .attr("y1", 375)
     .attr("x2", 250)
 	.attr("y2", 425)
-	.attr("stroke", "gray")
+	.attr("stroke", "black")
+	.attr("stroke-width", 2);
+
+    svg.append("line")
+    .attr("x1", 600)
+    .attr("y1", 375)
+    .attr("x2", 600)
+	.attr("y2", 425)
+	.attr("stroke", "black")
 	.attr("stroke-width", 2);
 
 	d3.select('svg').append('g')
