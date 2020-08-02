@@ -49,6 +49,7 @@ async function loadGraph() {
     .attr("y1", 350)
     .attr("x2", 250)
 	.attr("y2", 450)
+	.attr("stroke", "gray")
 	.attr("stroke-width", 5);
 
 	d3.select('svg').append('g')
