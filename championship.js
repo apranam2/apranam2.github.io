@@ -45,9 +45,9 @@ async function loadGraph() {
       });
 
     svg.append("text")
-    .attr("x", 250)
-    .attr("y", 385)
-	.text("TESTING")
+    .attr("x", 235)
+    .attr("y", 350)
+	.text("Steph Curry injured with a sprained right ankle")
 	.attr("font-family", "sans-serif")
     .attr("font-size", "12px")
     .attr("fill", "black");
@@ -59,6 +59,14 @@ async function loadGraph() {
 	.attr("y2", 425)
 	.attr("stroke", "black")
 	.attr("stroke-width", 2);
+
+	svg.append("text")
+    .attr("x", 600)
+    .attr("y", 350)
+	.text("Steph Curry injured with a sprained left MCL")
+	.attr("font-family", "sans-serif")
+    .attr("font-size", "12px")
+    .attr("fill", "black");
 
     svg.append("line")
     .attr("x1", 615)
