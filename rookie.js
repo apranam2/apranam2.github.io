@@ -46,16 +46,16 @@ async function loadGraph() {
 
     svg.append("line")
     .attr("x1", 0)
-    .attr("y1", 350)
+    .attr("y1", 275)
     .attr("x2", 50)
-	.attr("y2", 350)
+	.attr("y2", 275)
 	.attr("stroke", "black")
 	.attr("stroke-width", 2);
 
 	svg.append("text")
     .attr("x", 75)
-    .attr("y", 350)
-	.text("17.5 points average this season")
+    .attr("y", 275)
+	.text("17.5 PTS AVG")
 	.attr("font-family", "sans-serif")
     .attr("font-size", "12px")
     .attr("fill", "black");

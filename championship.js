@@ -45,8 +45,8 @@ async function loadGraph() {
       });
 
     svg.append("text")
-    .attr("x", 235)
-    .attr("y", 350)
+    .attr("x", 215)
+    .attr("y", 370)
 	.text("Sprained right ankle")
 	.attr("font-family", "sans-serif")
     .attr("font-size", "12px")
@@ -61,8 +61,8 @@ async function loadGraph() {
 	.attr("stroke-width", 2);
 
 	svg.append("text")
-    .attr("x", 600)
-    .attr("y", 350)
+    .attr("x", 580)
+    .attr("y", 370)
 	.text("Sprained left MCL")
 	.attr("font-family", "sans-serif")
     .attr("font-size", "12px")
