@@ -47,9 +47,10 @@ async function loadGraph() {
     svg.append("text")
     .attr("x", 250)
     .attr("y", 385)
-    .attr("x2", 250)
-	.attr("y2", 425)
 	.attr("text", "TESTING");
+	.attr("font-family", "sans-serif")
+    .attr("font-size", "12px")
+    .attr("fill", "black");
 
     svg.append("line")
     .attr("x1", 250)
@@ -60,9 +61,9 @@ async function loadGraph() {
 	.attr("stroke-width", 2);
 
     svg.append("line")
-    .attr("x1", 600)
+    .attr("x1", 615)
     .attr("y1", 375)
-    .attr("x2", 600)
+    .attr("x2", 615)
 	.attr("y2", 425)
 	.attr("stroke", "black")
 	.attr("stroke-width", 2);
