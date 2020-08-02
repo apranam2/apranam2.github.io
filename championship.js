@@ -47,7 +47,7 @@ async function loadGraph() {
     svg.append("text")
     .attr("x", 235)
     .attr("y", 350)
-	.text("Steph Curry injured with a sprained right ankle")
+	.text("Sprained right ankle")
 	.attr("font-family", "sans-serif")
     .attr("font-size", "12px")
     .attr("fill", "black");
@@ -63,7 +63,7 @@ async function loadGraph() {
 	svg.append("text")
     .attr("x", 600)
     .attr("y", 350)
-	.text("Steph Curry injured with a sprained left MCL")
+	.text("Sprained left MCL")
 	.attr("font-family", "sans-serif")
     .attr("font-size", "12px")
     .attr("fill", "black");
