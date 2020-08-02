@@ -69,7 +69,7 @@ async function loadGraph() {
 	.attr("stroke-width", 1);
 
 	svg.append("text")
-    .attr("x", 650)
+    .attr("x", 655)
     .attr("y", 74)
 	.text("Season High of 42 points")
 	.attr("font-family", "sans-serif")
